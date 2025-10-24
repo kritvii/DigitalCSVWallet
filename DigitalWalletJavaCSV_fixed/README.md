@@ -8,7 +8,7 @@ A simple Swing-based Java project that stores users and transactions in CSV file
 - Transaction history table
 - Data saved in CSV (no external DB)
 
-## How to Run (Mac/Windows/Linux)
+## How to Run (Mac/Windows)
 
 ### Using `javac` and `java`
 ```bash

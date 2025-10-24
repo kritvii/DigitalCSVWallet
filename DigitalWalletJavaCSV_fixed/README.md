@@ -1,6 +1,7 @@
 # Digital Banking Wallet (CSV) — Fixed
 
 A simple Swing-based Java project that stores users and transactions in CSV files (`data/users.csv`, `data/transactions.csv`).
+It allows users to store, view, and manage transactions in a lightweight, file-based digital wallet — without needing a full database setup.
 
 ## Features
 - Register/Login with user ID + PIN

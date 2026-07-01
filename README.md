@@ -1,107 +1,76 @@
-#  DigitalCSVWallet
+# DigitalCSVWallet
 
-**DigitalCSVWallet** is a simple Java-based wallet management application that uses **CSV files** for data storage. (`data/users.csv`, `data/transactions.csv`).  
-It allows users to store, view, and manage transactions in a lightweight, file-based digital wallet — without needing a full database setup.
-
----
-
-##  Features
--  Register/Login with **User ID + PIN**
--  Deposit, Withdraw, and Transfer between users
--  Transaction history with table display
--  Persistent data storage using **CSV files** (no database needed)
--  Auto-creates CSV files on first run
--  Simple console or Swing-based interface
+**DigitalCSVWallet** is a Java-based wallet management application that allows users to securely manage digital wallet accounts. The application uses CSV files for persistent data storage, making it lightweight, easy to use, and independent of any external database.
 
 ---
 
-## How to Run (Mac / Windows / Linux)
+## Features
 
-### Using `javac` and `java`
-```bash
-cd DigitalWalletJavaCSV_fixed
-javac -d out $(find src -name "*.java")
-cd out
-java com.walletapp.Main
-```
-
-**Windows PowerShell**
-```powershell
-cd DigitalWalletJavaCSV_fixed
-Get-ChildItem -Recurse -Filter *.java | % { $_.FullName } | javac -d out - @
-cd out
-java com.walletapp.Main
-```
-
-> Requires **Java 8+** (for `java.time` API).
+- Register and log in using a **User ID** and **PIN**
+- Deposit, withdraw, and transfer money between users
+- View transaction history in a structured format
+- Store user and transaction data using **CSV files**
+- Automatically creates required CSV files on the first run
+- Simple and user-friendly Java console/Swing interface
 
 ---
 
-###  In VS Code
-1. Open the folder `DigitalWalletJavaCSV_fixed`.
-2. Install **Extension Pack for Java**.
-3. Run `Main.java` directly or configure a Java build task.
-4. Ensure your working directory is the project root — so the `data/` folder is created beside the compiled output.
+## Technologies Used
+
+- Java
+- CSV File Storage
+- Object-Oriented Programming (OOP)
 
 ---
 
-##  Project Structure
+## Prerequisites
+
+Before running the project, ensure you have:
+
+- Java JDK 17 or later installed
+- A Java IDE such as IntelliJ IDEA, Eclipse, or VS Code (optional but recommended)
+
+---
+
+## How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/kritvii/DigitalCSVWallet.git
+   ```
+
+2. Open the project in your preferred Java IDE.
+
+3. Compile the Java source files.
+
+4. Run the main Java application.
+
+5. The required CSV files will be created automatically if they do not already exist.
+
+---
+
+## Project Structure
+
 ```
 DigitalCSVWallet/
-├── src/                # Java source code
-│   └── com/walletapp/  # Main app package (Main.java, etc.)
-├── data/               # Transaction CSV files
-├── out/                # Compiled class files
-└── README.md           # Project documentation
-```
-
-** Detailed layout:**
-```
-src/com/walletapp/Main.java
-src/com/walletapp/ui/WalletFrame.java
-src/com/walletapp/model/User.java
-src/com/walletapp/model/Transaction.java
-src/com/walletapp/service/Persistence.java
-src/com/walletapp/service/WalletService.java
-data/users.csv
-data/transactions.csv
+├── DigitalWalletJavaCSV_fixed/
+├── README.md
 ```
 
 ---
 
-##  Default Data
-- The app auto-creates empty CSVs on first run.  
-- Register **two users** to test the **Transfer** feature.
+## Future Improvements
+
+- Graphical User Interface (GUI) enhancements
+- Password encryption for improved security
+- Transaction search and filtering
+- Database support (MySQL/PostgreSQL)
+- Export transaction history as PDF
 
 ---
 
-##  Example CSV Format
+## Contributors
 
-A sample `data/transactions.csv` might look like:
-```csv
-Date,Description,Amount,Type
-2025-10-25,Deposit,5000,Credit
-2025-10-26,Online Purchase,-1200,Debit
-```
-
----
-
-##  Future Enhancements
-- GUI redesign using JavaFX or Swing components  
-- CSV encryption for PINs and transactions  
-- Export statements as PDF  
-- Integration with analytics APIs  
-- Add dark/light mode for UI  
-
----
-
-
-## Developed by:
-**Kritvi Rawat**   
-16014024060
-
-**Meeta Patil**   
-16014024055
-
----
-
+- Kritvii
+- Meeta Patil
